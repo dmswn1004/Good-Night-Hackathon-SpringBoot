@@ -16,6 +16,8 @@
 - REST API 규격을 맞춰주세요.
 - 기능 당 커밋은 필수입니다.
 
+<img width="1552" alt="스크린샷 2023-03-02 오전 2 25 33" src="https://user-images.githubusercontent.com/101851472/222216049-c9c7af80-91bd-4941-928a-7a4f4df58ffb.png">
+
 ### 도메인
 
 - Restaurant
@@ -74,3 +76,12 @@
 - [정길연](https://github.com/gilyeon00) ✨
 - [최세연](https://github.com/barabobBOB) ✨
 - [최우석](https://github.com/Sith-call) ✨
+
+---
+
+## H2
+
+<img width="470" alt="스크린샷 2023-02-27 오전 3 19 39" src="https://user-images.githubusercontent.com/101851472/222216176-a06dc5fb-2f61-4a5c-92af-47c41bb6da50.png">
+
+<img width="801" alt="스크린샷 2023-02-27 오전 3 20 10" src="https://user-images.githubusercontent.com/101851472/222216281-55d5e1c8-d4f6-4143-bc0a-da703dd57b67.png">
+
