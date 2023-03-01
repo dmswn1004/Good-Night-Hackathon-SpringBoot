@@ -5,7 +5,6 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Getter
-@NoArgsConstructor
 public class ReviewUpdateRequestDto {
     private String title;
     private String content;

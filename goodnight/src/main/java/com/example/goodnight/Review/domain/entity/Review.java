@@ -1,6 +1,7 @@
 package com.example.goodnight.Review.domain.entity;
 
 import com.example.goodnight.Restaurant.domain.entity.Restaurant;
+import com.example.goodnight.Review.dto.ReviewUpdateRequestDto;
 import com.example.goodnight.global.entity.BaseEntity;
 import lombok.*;
 
@@ -22,7 +23,7 @@ public class Review extends BaseEntity {
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "restaurant_id")
+    @JoinColumn(name = "restaurant_id", nullable = false)
     private Restaurant restaurant;
 
     @Builder
@@ -32,8 +33,8 @@ public class Review extends BaseEntity {
         this.content = content;
     }
 
-    public void update(String title, String content) {
-        this.title = title;
-        this.content = content;
+    public void update(ReviewUpdateRequestDto dto) {
+        this.title = dto.getTitle();
+        this.content = dto.getContent();
     }
 }

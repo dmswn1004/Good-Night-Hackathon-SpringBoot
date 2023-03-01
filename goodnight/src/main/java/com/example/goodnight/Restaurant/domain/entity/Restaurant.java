@@ -7,7 +7,6 @@ import javax.persistence.*;
 
 @Getter
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "restaurant")
 public class Restaurant extends BaseEntity {
@@ -21,7 +20,7 @@ public class Restaurant extends BaseEntity {
     @Column(name = "category", nullable = false)
     private String category;
 
-    @Column(name = "is_activated", nullable = false)
+    @Column(name = "isActivated", nullable = false)
     private boolean isActivated;
 
     @Builder

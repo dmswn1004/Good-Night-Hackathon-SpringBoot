@@ -1,6 +1,8 @@
 package com.example.goodnight.global.entity;
 
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -12,7 +14,11 @@ import java.time.LocalDateTime;
 @EntityListeners(value = {AuditingEntityListener.class})
 @MappedSuperclass
 public abstract class BaseEntity {
-    @CreatedDate private LocalDateTime createdAt;
+//    @CreatedDate
+    @CreationTimestamp
+    private LocalDateTime createdAt;
 
-    @LastModifiedDate private LocalDateTime updatedDate;
+//    @LastModifiedDate
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 }

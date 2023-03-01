@@ -26,7 +26,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("goodnight")
+                .title("goodnight API")
                 .description("API 명세서 입니다.")
                 .version("0.0.1")
                 .build();

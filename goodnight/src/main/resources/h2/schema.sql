@@ -5,7 +5,7 @@ create table Restaurant (
                             category varchar(25) not null,
                             isActivated bool DEFAULT True,
                             createdAt DATE,
-                            updatedDate DATE
+                            updatedAt DATE
 );
 
 drop table if exits Review
@@ -14,7 +14,7 @@ create table Review (
                         title varchar(45) not null,
                         content varchar(200) not null,
                         createdAt DATE,
-                        updatedDate DATE,
+                        updatedAt DATE,
                         restaurant_id long not null,
                         foreign key (restaurant_id) references Restaurant(id)
 );

@@ -33,8 +33,9 @@ public class RestaurantService {
     }
 
     // 레스토랑 조회
-    public RestaurantResponseDto findById(Long id) {
-        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(null);
+    public RestaurantResponseDto findById(Long id) throws Exception {
+        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
+                () -> new Exception("레스토랑을 찾을 수 없습니다."));
         RestaurantResponseDto dto = RestaurantResponseDto.builder()
                 .name(restaurant.getName())
                 .category(restaurant.getCategory())
@@ -45,15 +46,17 @@ public class RestaurantService {
 
     // 레스토랑 수정
     @Transactional
-    public void update(Long id, RestaurantUpdateRequestDto dto) {
-        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(null);
+    public void update(Long id, RestaurantUpdateRequestDto dto) throws Exception {
+        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
+                () -> new Exception("레스토랑을 찾을 수 없습니다."));
         restaurant.update(dto.getCategory());
     }
 
     // 레스토랑 삭제
     @Transactional
-    public void delete(Long id) {
-        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(null);
+    public void delete(Long id) throws Exception {
+        Restaurant restaurant = restaurantRepository.findById(id).orElseThrow(
+                () -> new Exception("레스토랑을 찾을 수 없습니다."));
         restaurant.delete();
     }
 }
